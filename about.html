@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Quicksand'>
+    <link rel="stylesheet" href="css/style.css">
+    <title>About Us</title>
+    <style>
+      * {
+            box-sizing: border-box;
+        }
+      .background
+        {
+            border: 2px solid;
+            border-radius: 6px;
+            padding: 10px;
+            width: 50%;
+            text-align: justify;
+        }
+      /* Float four columns side by side */
+      .column 
+        {
+            float: left;
+            width: 33%;
+            padding: 0 10px;
+      }
+      .row 
+        {
+            margin: 0 -5px;
+        }
+      /* Clear floats after the columns */
+      .row:after 
+        {
+            content: "";
+            display: table;
+            clear: both;
+        }
+      /* Style the cards */
+      .card 
+        {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            padding: 16px;
+            text-align: center;
+            background-color: #ffffd9;
+        }
+      .card:hover
+        {
+            background-color: #f5ddff;
+            transform: scale(1.05);
+        }
+      /* Team section styling */
+      .team .business .card
+        {
+            width: 50%;
+            background: #f5ddff;
+            border-radius: 6px;
+            text-align: center;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+      .team .business .card:hover
+        {
+            background: #ffffd9;
+        }
+      .team .business .card .box
+        {
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+      .team .business .card:hover .box
+        {
+            transform: scale(1.05);
+        }
+      .team .business .card img
+        {
+            height: 150px;
+            width: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 8px solid white;
+            transition: all 0.3s ease;
+        }
+      .team .business .card:hover img
+        {
+            border-color: black;
+        }
+      .jobposition
+        {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 8px;
+            text-transform: uppercase;
+        }
+      .team .name
+        {
+            font-weight: bold;
+            margin-bottom: -5px;
+        }
+      /* Responsive columns */
+      @media screen and (max-width: 900px) 
+      {
+      .column 
+        {
+            width: 100%;
+            display: block;
+            margin-bottom: 20px;
+        }
+        .team .business .card
+        {
+          width: 80%;
+        }
+      }
+  </style>
+  <body>
+    <div class="scroll-up-btn">
+      <h1>About us</h1>
+      <h2>Background of NURA Tote Bag</h2>
+      <center><img src="images/nura_logo.png" width="35%">
+      <p class="background">NURA Tote Bag Enterprise offers a high-quality handmade tote bag with minimalist designs which keep up with trends but also create our own designs and categorized in different kinds of theme. What makes our tote bag business is different from other tote bag brands is we use color changing for our designs in which without sunlight, the designs are white, and it will begin to change color when the tote bag is exposed to UV rays. NURA Tote Bag has been established since 2020 until now and is able to compete with other tote bag market brands because it has its own uniqueness.</p>
+      <br>
+
+      <h2>Our Vision, Mission and Objectives</h2>
+      <div class="center">
+        <div class="row">
+          <div class="column">
+            <div class="card">
+              <h3>Our Vision</h3>
+              <img src="icons/totebag-icon.png" width="50%">
+              <p>Be one of the largest manufacturers that offer cotton totebags with minimalist and colour changing designs.</p>
+            </div>
+          </div>
+        
+          <div class="column">
+            <div class="card">
+              <h3>Mission</h3>
+              <img src="icons/mission-icon.png" width="50%">
+              <p>We wish to satisfy our customers needs by providing them a uniqueness, good quality and affordable of tote bag products.</p>
+            </div>
+          </div>
+          
+          <div class="column">
+              <div class="card">
+                <h3>Objectives</h3>
+                <img src="icons/objectives-list-icon.png" width="50%">
+                <p>Maximum the use of resources and reduce operating costs and enhancing supplier and customer relationships.</p>
+              </div>
+            </div>
+        </div>
+      </div>
+      <br>
+      <br>
+
+      <h2>Value of Our Business</h2>
+      <p>“Everything is worth what its purchaser will pay for it.” Publilius Syrus, first century B.C.</p>
+        <div class="center">
+          <div class="row">
+              <div class="column">
+                <div class="card">
+                  <h3>Customization Value</h3>
+                  <img src="icons/customise-icon.png" width="50%">
+                  <p>We provide customization value by allowing our consumers to customize their name and designs on our products.</p>
+                </div>
+              </div>
+        
+              <div class="column">
+                <div class="card">
+                  <h3>Environmental Value</h3>
+                  <img src="icons/no-plastic-bag-icon.png" width="50%">
+                  <p>We designed products that minimize environmental impacts which our products act as reusable plastic that help in reducing the amount of water bottle waste. </p>
+                </div>
+              </div>
+
+              <div class="column">
+                <div class="card">
+                  <h3>Uniqueness Value</h3>
+                  <img src="icons/sunlight-icon.png" width="50%">
+                  <p>We provide unique and different tote bag from others which our designs of tote bag will change its colour when exposed to sunlight.</p>
+                </div>
+              </div>
+          </div>
+        </div>
+        <br>
+        <br>
+          <!-- Section for team business -->
+          <section class="team" id="team">
+            <h2>Meet the Team</h2>
+            <div class="business owl-business">
+              <div class="card">
+                <div class="box">
+                  <img src="images/general-manager.jpg" alt="">
+                    <div class="jobposition">General Manager</div>
+                      <p class="team name">Nik Nur Zulaikha Suhailie</p>
+                </div>
+              </div>
+              <br>
+              <div class="card">
+                <div class="box">
+                  <img src="images/operational-manager.jpeg" alt="">
+                    <div class="jobposition">Operational Manager</div>
+                      <p class="team name">Nor Amiera Syakilla Razali </p>
+                </div>
+              </div>
+              <br>
+              <div class="card">
+                <div class="box">
+                  <img src="images/financial-manager.jpeg" alt="">
+                    <div class="jobposition">Financial Manager</div>
+                      <p class="team name">Nur Salsabiila Mohd Hafiz</p>
+                </div>
+              </div>
+              <br>
+              <div class="card">
+                <div class="box">
+                  <img src="images/marketing-manager.jpeg">
+                    <div class="jobposition">Marketing Manager</div>
+                      <p class="team name">Nur Shazwani Binti Azman</p>
+                </div>
+              </div>
+              <br>
+           </div>
+          </section>
+      </center>
+  </body>
+</html>

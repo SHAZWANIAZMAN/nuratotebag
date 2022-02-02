@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Quicksand'>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Order</title>
+    <style>
+      body
+      {
+          margin-left: auto;
+          margin-right: auto;
+          width: 50%;
+      }
+      /* Styling the input type */
+      input, select
+      {
+          border-color: black;
+          border-radius: 10px;
+          padding: 6px;
+          margin-bottom: 10px;
+          font-size: 16px;
+          font-family: 'Quicksand';
+      }
+      td
+      {
+          font-weight: bold;
+          font-size: 16px;
+      }
+      .input .select .option .right form .field,
+      .input .right form .fields .field
+      {
+          height: 45px;
+          width: 100%;
+          margin-bottom: 15px;
+      }
+      .input .select .option .right form .field input,
+      .input .select .option .right form .textarea textarea{
+          height: 100%;
+          width: 100%;
+          border: 1px solid black;
+          border-radius: 6px;
+          outline: none;
+          padding: 0 15px;
+          font-size: 17px;
+          font-family: 'Quicksand';
+          transition: all 0.3s ease;
+      }
+       /* Styling the accordion */
+      .accordion 
+      {
+          background-color: #f7eab7;
+          color: black;
+          cursor: pointer;
+          padding: 18px;
+          width: 100%;
+          border: none;
+          text-align: left;
+          outline: none;
+          font-size: 16px;
+          transition: 0.4s;
+          font-family: 'Quicksand';
+          font-weight: bold;
+      }
+      .active, .accordion:hover 
+      {
+          background-color: #dee2eb;
+      }
+      .accordion:after 
+      {
+          content: '\002B';
+          color: black;
+          font-weight: bold;
+          float: right;
+          margin-left: 5px;
+      }
+      .active:after 
+      {
+          content: "\2212";
+      }
+      .panel 
+      {
+          padding: 0 18px;
+          background-color: #f5ddff;
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.2s ease-out;
+      }
+    </style>
+  <body>
+    <div class="scroll-up-btn">
+    <center>
+    <h1>Order form</h1>
+      <h2>Place your order here</h2>
+        <p>Fill in the order form below. Then, we will WhatsApp you to proceed with the payments.</p>
+
+    <!-- Accordion -->
+    <button class="accordion">Click Here to Get The Discount Price</button>
+      <div class="panel">
+        <ul type="circle" style="text-align: left; font-weight: bold; line-height: 1.5;">
+          <li>3 pcs of tote bags: 5% off</li>
+          <li>5 pcs of tote bags: 10% off</li>
+          <li>8 pcs of tote bags: 15% off</li>
+          <li>10 pcs of tote bags: 20% off</li>
+        </ul>
+      </div>
+
+    <!-- Form action -->
+    <form name="form1" action="mailto: nuratotebag@gmail.com" method="post" enctype="text/plain">
+    
+    <!-- Order form -->
+    <table>
+    <tr>
+      <div class="fields">
+        <div class="field input select option">
+          <!-- Name -->
+          <td>Your Name:</td>
+            <td>
+              <input type="text" name="name" size="50" placeholder="Name" required>
+            </td>
+      </tr>
+      <tr>
+        <!-- Phone -->
+        <td>Phone:  </td>
+          <td>
+            <input type="text" name="phone" size="50" placeholder="Phone" required>
+          </td>
+      </tr>
+      <tr>
+        <!-- Address -->
+        <td>Address:  </td>
+          <td>
+            <input type="text" name="Address" size="50" placeholder="Address" required>
+        </td>
+      </tr>
+      <tr>
+        <!-- Quantity -->
+        <td>Quantity</td>
+          <td>
+            <!-- Option -->
+            <select name="Quantity" width="50">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+            </select>
+        </td>
+      </tr>
+        <!-- Tote bag pocket -->
+        <td>Tote Bag Pocket</td>
+          <td>
+            <select name="Type of Tote Bag">
+              <option value="With Pocket">With Pocket</option>
+              <option value="Without Pocket">Without Pocket</option>
+              <option value="Both">Both</option>
+            </select>
+        </td>
+      </tr>
+      <tr>
+        <!-- Type of tote bag -->
+        <td>Type of Tote Bag</td>
+          <td>
+            <select name="Type of Tote Bag">
+              <option value="Printing">Printing</option>
+              <option value="Colour Changing Designs">Colour Changing Designs</option>
+              <option value="Printing and Colour Changing Designs">Both</option>
+            </select>
+        </td>
+      </tr>
+        <!-- Tote Bag Colour -->
+        <td>Tote Bag Colour</td>
+          <td>
+            <select name="Tote Bag Colour">
+              <option value="Black">Black</option>
+              <option value="White">White</option>
+              <option value="Rose Gold">Rose Gold</option>
+              <option value="Sage">Sage</option>
+            </select>
+          </td>
+      </tr>
+      <tr>
+        <!-- Designs chosen for printing tote bag -->
+        <td>Designs Chosen for<br>Printing Tote Bag</td>
+          <td>
+          <br>
+            <input type="checkbox" name="printing tote bag" value="Speaks">
+              <label for="printing tote bag">Speaks</label>
+            <input type="checkbox" name="printing tote bag" value="Stylish">
+              <label for="printing tote bag">Stylish</label>
+            <input type="checkbox" name="printing tote bag" value="Freedom">
+              <label for="printing tote bag">Freedom</label>
+            <input type="checkbox" name="printing tote bag" value="Dreams">
+              <label for="printing tote bag">Dreams</label>
+            <input type="checkbox" name="printing tote bag" value="Blob">
+              <label for="printing tote bag">Blob</label><br>
+            <input type="checkbox" name="printing tote bag" value="Gorgeous">
+              <label for="printing tote bag">Gorgeous</label>
+            <input type="checkbox" name="printing tote bag" value="Wave">
+              <label for="printing tote bag">Wave</label>
+            <input type="checkbox" name="printing tote bag" value="Trio">
+              <label for="printing tote bag">Trio</label>
+            <input type="checkbox" name="printing tote bag" value="Butterflies">
+              <label for="printing tote bag">Butterflies</label>
+            <input type="checkbox" name="printing tote bag" value="Oyen">
+              <label for="printing tote bag">Oyen</label><br>
+            <input type="checkbox" name="printing tote bag" value="Coffee">
+              <label for="printing tote bag">Coffee</label>
+            <input type="checkbox" name="printing tote bag" value="Custom">
+              <label for="printing tote bag">Custom (Insert Images)</label><br>
+            <label for="file">Select a file:</label>
+              <input type="file" id="file" name="file"><br>
+              <label for="file">Select a file:</label>
+              <input type="file" id="file" name="file">
+          </td>
+      </tr>
+      <tr>
+      <br>
+        <!-- Designs chosen for colour changing designs tote bag -->
+        <td>Designs Chosen for<br>Colour Changing Designs<br>Tote Bag</td>
+          <td>
+          <br>
+            <input type="checkbox" name="colour changing designs tote bag" value="Lovely">
+              <label for="colour changing designs tote bag">Lovely</label>
+            <input type="checkbox" name="colour changing designs tote bag" value="Social">
+              <label for="colour changing designs tote bag">Social</label>
+            <input type="checkbox" name="colour changing designs tote bag" value="Corel">
+              <label for="colour changing designs tote bag">Corel</label>
+            <input type="checkbox" name="colour changing designs tote bag" value="Dancer">
+              <label for="colour changing designs tote bag">Dancer</label>
+            <input type="checkbox" name="colour changing designs tote bag" value="Confidence">
+              <label for="colour changing designs tote bag">Confidence</label><br>
+            <input type="checkbox" name="colour changing designs tote bag" value="Roses">
+              <label for="colour changing designs tote bag">Roses</label>
+            <input type="checkbox" name="colour changing designs tote bag" value="Phelia">
+              <label for="colour changing designs tote bag">Phelia</label>
+            <input type="checkbox" name="colour changing designs tote bag" value="Memories">
+              <label for="colour changing designs tote bag">Memories</label>
+            <input type="checkbox" name="colour changing designs tote bag" value="Active">
+              <label for="colour changing designs tote bag">Active</label>
+            <input type="checkbox" name="colour changing designs tote bag" value="Married">
+              <label for="colour changing designs tote bag">Married</label><br>
+            <input type="checkbox" name="colour changing designs tote bag" value="Makeup">
+              <label for="colour changing designs tote bag">Makeup</label>
+            <input type="checkbox" name="colour changing designs tote bag" value="Catty">
+              <label for="colour changing designs tote bag">Catty</label>
+            <input type="checkbox" name="colour changing designs tote bag" value="Custom">
+              <label for="colour changing designs tote bag">Custom (Insert Images)</label><br>
+            <label for="file">Select a file:</label>
+              <input type="file" id="file" name="file"><br>
+            <label for="file">Select a file:</label>
+              <input type="file" id="file" name="file">
+        </td>
+      </tr>
+      <tr>
+      <br>
+        <!-- Designs chosen for font names -->
+        <td>Designs Chosen for<br>Font Names</td>
+          <td>
+          <br>
+            <input type="checkbox" name="font name" value="01 Abril Fatface">
+              <label for="font name">01 Abril Fatface</label>
+            <input type="checkbox" name="font name" value="02 Alice">
+              <label for="font name">02 Alice</label>
+            <input type="checkbox" name="font name" value="03 Alex Brush">
+              <label for="font name">03 Alex Brush</label><br>
+            <input type="checkbox" name="font name" value="04 Aloja">
+              <label for="font name">04 Aloja</label>
+            <input type="checkbox" name="font name" value="05 Bebas Neue">
+              <label for="font name">05 Bebas Neue</label>
+            <input type="checkbox" name="font name" value="06 Canva">
+              <label for="font name">06 Canva</label><br>
+            <input type="checkbox" name="font name" value="07 Dreaming">
+              <label for="font name">07 Dreaming</label>
+            <input type="checkbox" name="font name" value="08 Gochi Hand">
+              <label for="font name">08 Gochi Hand</label>
+            <input type="checkbox" name="font name" value="09 Moontime">
+              <label for="font name">09 Moontime</label><br>
+            <input type="checkbox" name="font name" value="010 Playlist Script">
+              <label for="font name">010 Playlist Script</label>
+            <input type="checkbox" name="font name" value="011 Bristol">
+              <label for="font name">011 Bristol</label>
+            <input type="checkbox" name="font name" value="012 Caveat">
+              <label for="font name">012 Caveat</label><br>
+            <input type="checkbox" name="font name" value="Custom">
+              <label for="font name">Custom</label>
+            <input type="text" name="name" size="20" placeholder="Insert font Names">
+          </td>
+      </tr>
+      <tr>
+        <!-- Designs chosen for font colours -->
+        <td>Designs Chosen for<br>Font Colours</td>
+          <td>
+          <br>
+            <input type="checkbox" name="font colours" value="Light Pink">
+              <label for="font colours">Light Pink</label>
+            <input type="checkbox" name="font colours" value="Light Purple">
+              <label for="font colours">Light Purple</label>
+            <input type="checkbox" name="font colours" value="Light Blue">
+              <label for="font colours">Light Blue</label>
+            <input type="checkbox" name="font colours" value="Light Yellow">
+              <label for="font colours">Light Yellow</label><br>
+            <input type="checkbox" name="font colours" value="Custom">
+              <label for="font colours">Custom</label>
+              <label for="custom colour">(select your custom color here):</label>  
+            <input type="color" name="custom color" value="#ff0000"><br>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <!-- Submit and reset button -->
+          <input type="submit" value="Submit Order" style="background-color: #f5ddff; font-weight: bold">
+          <input type="reset" value="Reset Order" style="background-color: #f5ddff; font-weight: bold">
+        </td>
+      </tr>
+    </table>
+    </form>
+    </center>
+      <!-- Script for accordion -->
+      <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+        
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+              panel.style.maxHeight = null;
+            } else {
+              panel.style.maxHeight = panel.scrollHeight + "px";
+            } 
+          });
+        }
+      </script>
+  </body>
+</html>

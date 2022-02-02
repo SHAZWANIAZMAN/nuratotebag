@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Quicksand'>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Footer</title>
+    <style>
+      body
+        {
+          background-color: #f5ddff;
+        }
+      p
+        {
+          text-align: center;
+       
+        }
+      /* Adjusting the icons become center */
+      #footer
+        {
+          text-align: center;
+        }
+      /* Adjusting the padding, width and height of social media and contact informations icons  */
+      .phone
+        {
+          padding: 0px;
+          width: 25px;
+        }
+      .email
+        {
+          padding: 0px;
+          width: 25px;
+        }    
+      .facebook
+        {
+          padding: 0px;
+          width: 25px;    
+        }
+      .instagram
+        {
+          padding: 0px;
+          width: 25px;
+          height: 25px;
+        }
+      .whatsapp
+        {
+          padding: 0px;
+          width: 25px;
+          height: 25px;
+        }
+      .clock{
+        margin-top: -45px; 
+        }
+    </style>
+  </head>
+  <body>
+    <!--Contact informations and social media icons-->
+    <div id="footer">
+      <a href="tel: +60197505342" target="_blank"><img class="phone" src="icons/phone-logo-icon.png"></a>
+      <a href="mailto: nuratotebag@gmail.com" target="_blank"><img class="email" src="icons/email-logo-icon.png"></a>
+      <a href="https://www.facebook.com/nuratotebag" target="_blank"><img class="facebook" src="icons/facebook-logo-icon.png"></a>
+      <a href="https://www.instagram.com/nuratotebag/" target="_blank"><img class="instagram" src="icons/instagram-logo-icon.png"></a>
+      <a href="https://api.whatsapp.com/send?phone=60197505342" target="_blank"><img class="whatsapp" src="icons/whatsapp-logo-icon.png"></a>
+ 
+        <!--Adjusting the copyright information and latest updated of website-->
+        <p style="font-size: 10px; font-weight: bold; margin-top: 2px; color: black">&copy Copyright 2022 NURA Tote Bag<br> Last Updated on 30 January 2022. All rights reserved.</p>
+    </div>
+
+        <!--Clock scripting-->
+          
+      <body onload="startTime()">
+        <div class="clock">
+            <p id="demo"></p>
+        </div>
+        <div id="txt">
+       
+          <script>
+            function startTime() {
+              const today = new Date();
+              let h = today.getHours();
+              let m = today.getMinutes();
+              let s = today.getSeconds();
+              m = checkTime(m);
+              s = checkTime(s);
+              document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
+              setTimeout(startTime, 1000);
+            }
+            function checkTime(i) {
+              if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+              return i;
+            }
+          </script>
+  </body>
+</html>

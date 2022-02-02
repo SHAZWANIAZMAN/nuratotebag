@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Quicksand'>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        * {
+              box-sizing: border-box;
+          }
+        /* Add a white background color with some padding */
+        body 
+          {
+              padding: 10px;
+              background: white;
+              text-align: center;
+          }
+        /* Create two unequal columns that floats next to each other */
+        /* Left column */
+        .leftcolumn 
+          {   
+              float: left;
+              width: 75%;
+          }
+        /* Right column */
+        .rightcolumn 
+          {
+              float: left;
+              width: 25%;
+              padding-left: 20px;
+          }
+        /* Add a card effects */
+        .card 
+          {
+              padding: 15px;
+              margin-top: 10px;
+          }
+        /* Clear floats after the columns */
+        .row:after 
+          {
+              content: "";
+              display: table;
+              clear: both;
+          }
+        /* The Modal (background) */
+        .zoom 
+          {
+              display: none; /* Hidden by default */
+              position: fixed; /* Stay in place */
+              z-index: 1; /* Sit on top */
+              padding-top: 250px; /* Location of the box */
+              left: 0;
+              top: 0;
+              width:100%; /* Full width */
+              height: 100%; /* Full height */
+              overflow: hidden; /* -Hide scroll */
+              background-color: rgb(0,0,0); /* Fallback color */
+              background-color: rgba(0,0,0,0.2); /* Black w/ opacity */
+          }
+        /* Modal Content (image) */
+        .zoom-content 
+          {
+              margin: auto;
+              display: block;
+              width: 70%;
+              max-width: 900px;
+          }
+          /* Add Animation */
+        .zoom-content, #caption 
+          {  
+              -webkit-animation-name: zoom;
+              -webkit-animation-duration: 0.6s;
+              animation-name: zoom;
+              animation-duration: 0.6s;
+          }
+        @-webkit-keyframes zoom {
+              from {-webkit-transform:scale(0)} 
+              to {-webkit-transform:scale(1)}
+          }
+        @keyframes zoom {
+              from {transform:scale(0)} 
+              to {transform:scale(1)}
+          }
+        /* The Close Button */
+        .close 
+          {
+              position: absolute;
+              top: 15px;
+              right: 35px;
+              color: white;
+              font-size: 40px;
+              font-weight: bold;
+              transition: 0.3s;
+          }
+        .close:hover,
+        .close:focus 
+          {
+              color: black;
+              text-decoration: none;
+              cursor: pointer;
+          }
+        h2
+          {
+              font-weight: bold;
+              text-align: center;
+              text-transform: uppercase;
+          }
+        p, ul
+          {
+              font-weight: bold;
+              font-size: 16px;
+          }
+        @media screen and (max-width: 800px) {
+          .leftcolumn, .rightcolumn 
+          {   
+            width: 100%;
+            padding: 0;
+          }
+        }
+        .zoom-content 
+          {
+            width: 100%;
+          }
+      </style>
+    </head>
+  <body>
+    <div class="scroll-up-btn">
+      <h1>Our products and services</h1>
+
+    <!-- Leftcolumn for our products -->
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="card">
+          <h2>Printing Tote Bag</h2>
+          <img src="images/printing-totebag-product-page.png" style="height:100%; width:100% ">
+          <p>We provide a high quality printing tote bag that is fully designed by us in which the design’s of our tote bag will be able to suit the taste and preferences among all ages and genders. We offer reasonable and affordable prices with high quality for printing tote bags.</p>
+        </div>
+        <div class="card">
+          <h2>Colour Changing Designs Tote Bag</h2>
+          <img src="images/colour-changing-designs-totebag-product-page.png" style="height:100%; width:100% ">  
+          <p>Our tote bag will change its colour when it is exposed to sunlight. As an example, when there is no sunlight and UV light, the designs will be maintained in white colour but when there is sunlight, the designs will immediately change its colour. The brighter the sunlight, the brighter the colour is, which makes our tote bag unique and different from others.</p>
+        </div>
+        <div class="card">
+          <h2>Personalised your own tote bag</h2>
+          <img src="images/font-type-product-page.png" style="height:100%; width:100% ">
+          <p>We provide personalization name services on tote bags that allow you to customise their name by using our available font types while for the font colour is you can choose any colours that you want ! You also can customise your own designs on tote bags.</p>
+        </div>
+      </div>
+
+      <!-- Rightcolumn for our products -->
+      <div class="rightcolumn">
+        <div class="card" style="border: 2px solid">
+          <h2>Colours of our tote bag</h2>
+          <!-- Zoom-content/modal images -->
+          <img id="images for products page" src="images/totebag-colours.png" style="height:100%; width:100% ">
+          <p>Click image above to view the full image</p>
+            <div id="zoom images" class="zoom">
+              <span class="close">&times;</span>
+              <img class="zoom-content" id="img01">
+            </div>
+              <ul type="circle" style="text-align: left">
+                <li>White for Purity and Simplicity.</li>
+                <br>
+                <li>Black for Power and Strength.</li>
+                <br>
+                <li>Sage for Calmness and Relaxation.</li>
+                <br>
+                <li>Rose Gold for Feminity and Soft.</li>
+              </ul>
+      </div>
+        <!-- Services section -->
+        <div class="card" style="border: 2px solid">
+          <h1>Our services</h1>
+          <h2>Design consultation Services</h2>
+            <center><img src="icons/consultation-icon.png" width="100"></center>
+              <p>We provide design consultation services where you can consult with us to choose the right design that suits of your tastes where we can directly edit your designs.</p>
+        <div class="card">
+          <h2>Delivery services</h2>
+            <center><img src="icons/delivery-icon.png" width="100"></center>
+              <p>We are ready to ship your parcel as fast to your address including Peninsular and Sabah / Sarawak ! We using J&T Express to deliver your item.</p>
+        <div class="card">
+          <h2>Cash On Delivery services</h2>
+            <center><img src="icons/cod-icon.png" width="100"></center>
+              <p>We accept Cash on delivery (COD) when a recipient pays for a good or service at the time of delivery. The area that we cover is within Selangor and Kuala Lumpur area.</p>
+        </div>
+
+         <!-- Script for modal content images -->
+        <script>
+            // Get the modal
+            var modal = document.getElementById("zoom images");
+            
+            // Get the image and insert it inside the modal - use its "alt" text as a caption
+            var img = document.getElementById("images for products page");
+            var modalImg = document.getElementById("img01");
+          
+            img.onclick = function(){
+              modal.style.display = "block";
+              modalImg.src = this.src;
+            }
+            
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+            
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() { 
+              modal.style.display = "none";
+            }
+        </script>
+  </body>
+</html>

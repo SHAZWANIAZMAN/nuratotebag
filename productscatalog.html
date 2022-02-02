@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Quicksand'>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Products Catalog</title>
+      <style>
+        body 
+          {
+            font-family: 'Quicksand';
+            margin: 0;
+          }
+        html 
+          {
+            box-sizing: border-box;
+          }
+            
+        *, *:before, *:after 
+          {
+            box-sizing: inherit;
+          } 
+        .column 
+          {
+            float: left;
+            margin-bottom: 16px;
+            padding: 0 10px;
+          } 
+        .card 
+          {
+              box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+              margin: 8px;
+          }
+        .card:hover 
+          {
+              background-color: #f5ddff;
+              transform: scale(1.1, 1.1) rotate(0deg);
+              transition: all 0.35s;
+          }  
+        .container 
+          {
+              padding: 0 10px;
+          } 
+        .container::after, .row::after 
+          {
+              content: "";
+              clear: both;
+              display: table;
+          }
+        .price 
+          {
+              color: grey;
+          }
+        a
+          {
+              color: white;
+              text-transform: uppercase;
+              font-weight: bold;
+              font-family: 'Quicksand';
+          }
+        a:hover
+          {
+              color: #f7eab7;
+              font-weight: bold;
+              font-family: 'Quicksand';
+          }
+        .button 
+          {
+              border: none;
+              outline: 0;
+              padding: 8px;
+              text-align: center;
+              background-color: black;
+              text-align: center;
+              cursor: pointer;
+              width: 40%;
+          }
+        .row,.row > .column 
+          {
+              padding: 8px;
+          }
+        /* Create three equal columns that floats next to each other */
+        .column 
+          {
+              width: 33.33%;
+              display: none; /* Hide all elements by default */
+          }
+        /* Clear floats after rows */ 
+        .row:after 
+          {
+              content: "";
+              display: table;
+              clear: both;
+          }
+        .show 
+          {
+              display: block;
+          }
+        .btn 
+          {
+              border: none;
+              outline: none;
+              padding: 12px 16px;
+              background-color: #dee2eb;
+              cursor: pointer;
+              font-family: 'Quicksand';
+              font-weight: bold;
+          }
+        .btn:hover 
+          {
+              background-color: #dee2eb;
+          }
+        .btn.active 
+          {
+              background-color: #f7eab7;
+          }
+        .quotes
+          {
+              font-size: 14px;
+          }
+        @media screen and (max-width: 900px) {
+        .column 
+          {
+              width: 100%;
+          }
+        }
+      </style>
+    </head>
+  <body>
+    <div class="scroll-up-btn">
+      <h1 style="text-align:center">Catalog of our products</h1>
+    <center>
+      <p>Need some music while choosing your tote bag designs? Click audio below !</p>
+      <!--Insert audio-->
+      <!--Audio from LuKrembo channel on YouTube (but there is no copyright music/free to use)-->
+      <audio controls>
+        <source src="audios/biscuit_music.mp3" type="audio/ogg" alt="Biscuit aesthetic songs in video 1">
+          <source src="audios/biscuit_music.mp3" type="audio/mpeg" alt="Biscuit aesthetic songs in video 1">
+            Your browser does not support the audio element.
+      </audio>
+    </div>
+    </center>
+    <br>
+
+      <!--Button filtering-->
+      <div id="myBtnContainer" style="text-align: center">
+        <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+        <button class="btn" onclick="filterSelection('printing tote bag')"> Printing Tote Bag</button>
+        <button class="btn" onclick="filterSelection('colour changing designs tote bag')"> Colour Changing Designs Tote Bag</button>
+        <button class="btn" onclick="filterSelection('personalised your name')"> Personalised Your Name</button>
+        <button class="btn" onclick="filterSelection('custom own designs')"> Custom Own Design</button>
+      </div>
+
+      <!--Printing tote bag button-->
+        <div class="center">
+          <div class="row">
+            <div class="column, column printing tote bag">
+              <div class="card">
+                <img src="images/speaks-design-totebag.png" alt="Speaks Design Tote Bag" style="width:100%">
+                <div class="container">
+                  <h2>Speaks</h2>
+                  <p class="price">RM20</p>
+                  <p class="quotes">"Think before you speak"</p>
+                  <p><button class="button"><a href="order.html" target="main" style="text-decoration: none">Buy Now</button></p></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="column, column printing tote bag">
+              <div class="card">
+                <img src="images/stylish-design-totebag.png" alt="Stylish Design Tote Bag" style="width:100%">
+                <div class="container">
+                  <h2>Stylish</h2>
+                  <p class="price">RM20</p>
+                  <p class="quotes">"Style even you're hijabist"</p>
+                  <p><button class="button"><a href="order.html" target="main" style="text-decoration: none">Buy Now</button></p></a>
+                </div>
+              </div>
+            </div>
+          
+            <div class="column, column printing tote bag">
+              <div class="card">
+                <img src="images/wings-design-totebag.png" alt="Wings Design Tote Bag" style="width:100%">
+                <div class="container">
+                  <h2>Freedom</h2>
+                  <p class="price">RM20</p>
+                  <p class="quotes">"Fight for justice"</p>
+                  <p><button class="button"><a href="order.html" target="main" style="text-decoration: none">Buy Now</button></p></a>
+                </div>
+              </div>
+            </div>
+        
+            <div class="column, column printing tote bag">
+                <div class="card">
+                  <img src="images/dreams-design-totebag.png" alt="Dreams Design Tote Bag" style="width:100%">
+                  <div class="container">
+                    <h2>Dreams</h2>
+                    <p class="price">RM20</p>
+                    <p class="quotes">"Catch your dreams"</p>
+                    <p><button class="button"><a href="order.html" target="main" style="text-decoration: none">Buy Now</button></p></a>
+                  </div>
+                </div>
+              </div>
+        
+              <div class="column, column printing tote bag">
+                <div class="card">
+                  <img src="images/blob-design-totebag.png" alt="Blob Design Tote Bag" style="width:100%">
+                  <div class="container">
+                    <h2>Blob</h2>
+                    <p class="price">RM20</p>
+                    <p class="quotes">"Pink is beautiful"</p>
+                    <p><button class="button"><a href="order.html" target="main" style="text-decoration: none">Buy Now</button></p></a>
+                  </div>
+                </div>
+              </div>
+           
+              <div class="column, column printing tote bag">
+                <div class="card">
+                  <img src="images/gorgeous-design-totebag.png" alt="Gorgeous Design Tote Bag" style="width:100%">
+                  <div class="container">
+                    <h2>Gorgeous</h2>
+                    <p class="price">RM20</p>
+                    <p class="quotes">"You're gorgeous"</p>
+                    <p><button class="button"><a href="order.html" target="main" style="text-decoration: none">Buy Now</button></p></a>
+                  </div>
+                </div>
+              </div>
+          
+              <div class="column, column printing tote bag">
+                <div class="card">
+                  <img src="images/wave-design-totebag.png" alt="Wave Design Tote Bag" style="width:100%">
+                  <div class="container">
+                    <h2>Wave</h2>
+                    <p class="price">RM20</p>
+                    <p class="quotes">"Dance with the waves"</p>
+                    <p><button class="button"><a href="order.html" target="main" style="text-decoration: none">Buy Now</button></p></a>
+                  </div>
+                </div>
+              </div>
+           
+              <div class="column, column printing tote bag">
+                <div class="card">
+                  <img src="images/trio-design-totebag.png" alt="Trio Design Tote Bag" style="width:100%">
+                  <div class="container">
+                    <h2>Trio</h2>
+                    <p class="price">RM20</p>
+                    <p class="quotes">"Trio makes one"</p>
+                    <p><button class="button"><a href="order.html" target="main" style="text-decoration: none">Buy Now</button></p></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="column, column printing tote bag">
+                <div class="card">
+                  <img src="images/butterflies-design-totebag.png" alt="Butterflies Design Tote Bag" style="width:100%">
+                  <div class="container">
+                    <h2>Butterflies</h2>
+                    <p class="price">RM20</p>
+                    <p class="quotes">"Love is like a butterfly"</p>
+                    <p><button class="button"><a href="order.html" target="main" style="text-decoration: none">Buy Now</button></p></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="column, column printing tote bag">
+                <div class="card">
+                  <img src="images/oyen-design-totebag.png" alt="Oyen Design Tote Bag" style="width:100%">
+                  <div class="container">
+                    <h2>Oyen</h2>
+                    <p class="price">RM20</p>
+                    <p class="quotes">"Oyen paw"</p>
+                    <p><button class="button"><a href="order.html" target="main" style="text-decoration: none">Buy Now</button></p></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="column, column printing tote bag">
+                <div class="card">
+                  <img src="images/coffee-design-totebag.png" alt="Oyen Design Tote Bag" style="width:100%">
+                  <div class="container">
+                    <h2>Coffee</h2>
+                    <p class="price">RM20</p>
+                    <p class="quotes">"Obssessed with coffee"</p>
+                    <p><button class="button"><a href="order.html" target="main" style="text-decoration: none">Buy Now</button></p></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="column, column printing tote bag">
+                <div class="card">
+                  <img src="images/rose-design-totebag.png" alt="Rose Design Tote Bag" style="width:100%">
+                  <div class="container">
+                    <h2>Rose</h2>
+                    <p class="price">RM20</p>
+                    <p class="quotes">"Bloom with grace"</p>
+                    <p><button class="button"><a href="order.html" target="main" style="text-decoration: none">Buy Now</button></p></a>
+                  </div>
+                </div>
+              </div>
+
+              <!--Colour changing designs tote bag button-->
+              <div class="column, column colour changing designs tote bag">
+                <div class="card">
+                  <img src="images/lovely-design-totebag.png" alt="Lovely Design Tote Bag" style="width:100%">
+                  <div class="container">
+                    <h2>Lovely</h2>
+                    <p class="price">RM25</p>
+                    <p class="quotes">"Love is happiness"</p>
+                    <p><button class="button"><a href="order.html" target="main" style="text-decoration: none">Buy Now</button></p></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="column, column colour changing designs tote bag">
+                <div class="card">
+                  <img src="images/social-media-design-totebag.png" alt="Social Media Design Tote Bag" style="width:100%">
+                  <div class="container">
+                    <h2>Social</h2>
+                    <p class="price">RM25</p>
+                    <p class="quotes">"Happiness pill"</p>
+                    <p><button class="button"><a href="order.html" target="main" style="text-decoration: none">Buy Now</button></p></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="column, column colour changing designs tote bag">
+                <div class="card">
+                  <img src="images/corel-design-totebag.png" alt="Corel Design Tote Bag" style="width:100%">
+                  <div class="container">
+                    <h2>Corel</h2>
+                    <p class="price">RM25</p>
+                    <p class="quotes">"Be like line art"</p>
+                    <p><button class="button"><a href="order.html" target="main" style="text-decoration: none">Buy Now</button></p></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="column, column colour changing designs tote bag">
+                <div class="card">
+                  <img src="images/dancer-design-totebag.png" alt="Dancer Design Tote Bag" style="width:100%">
+                  <div class="container">
+                    <h2>Dancer</h2>
+                    <p class="price">RM25</p>
+                    <p class="quotes">"No permission to dance"</p>
+                    <p><button class="button"><a href="order.html" target="main" style="text-decoration: none">Buy Now</button></p></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="column, column colour changing designs tote bag">
+                <div class="card">
+                  <img src="images/confidence-design-totebag.png" alt="Confidence Design Tote Bag" style="width:100%">
+                  <div class="container">
+                    <h2>Confidence</h2>
+                    <p class="price">RM25</p>
+                    <p class="quotes">"Be confident and brave"</p>
+                    <p><button class="button"><a href="order.html" target="main" style="text-decoration: none">Buy Now</button></p></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="column, column colour changing designs tote bag">
+                <div class="card">
+                  <img src="images/roses-design-totebag.png" alt="Roses Design Tote Bag" style="width:100%">
+                  <div class="container">
+                    <h2>Roses</h2>
+                    <p class="price">RM25</p>
+                    <p class="quotes">"Be pink and red roses"</p>
+                    <p><button class="button"><a href="order.html" target="main" style="text-decoration: none">Buy Now</button></p></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="column, column colour changing designs tote bag">
+                <div class="card">
+                  <img src="images/phelia-design-totebag.png" alt="Phelia Design Tote Bag" style="width:100%">
+                  <div class="container">
+                    <h2>Phelia</h2>
+                    <p class="price">RM25</p>
+                    <p class="quotes">"No chill, just phelia"</p>
+                    <p><button class="button"><a href="order.html" target="main" style="text-decoration: none">Buy Now</button></p></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="column, column colour changing designs tote bag">
+                <div class="card">
+                  <img src="images/memories-design-totebag.png" alt="Memories Design Tote Bag" style="width:100%">
+                  <div class="container">
+                    <h2>Memories</h2>
+                    <p class="price">RM25</p>
+                    <p class="quotes">"Memories with loved ones"</p>
+                    <p><button class="button"><a href="order.html" target="main" style="text-decoration: none">Buy Now</button></p></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="column, column colour changing designs tote bag">
+                <div class="card">
+                  <img src="images/active-design-totebag.png" alt="Active Design Tote Bag" style="width:100%">
+                  <div class="container">
+                    <h2>Active</h2>
+                    <p class="price">RM25</p>
+                    <p class="quotes">"Stay active, don't lazy"</p>
+                    <p><button class="button"><a href="order.html" target="main" style="text-decoration: none">Buy Now</button></p></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="column, column colour changing designs tote bag">
+                <div class="card">
+                  <img src="images/married-design-totebag.png" alt="Married Design Tote Bag" style="width:100%">
+                  <div class="container">
+                    <h2>Married</h2>
+                    <p class="price">RM25</p>
+                    <p class="quotes">"Husband and wife"</p>
+                    <p><button class="button"><a href="order.html" target="main" style="text-decoration: none">Buy Now</button></p></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="column, column colour changing designs tote bag">
+                <div class="card">
+                  <img src="images/makeup-design-totebag.png" alt="Married Design Tote Bag" style="width:100%">
+                  <div class="container">
+                    <h2>Makeup</h2>
+                    <p class="price">RM25</p>
+                    <p class="quotes">"Makeup for stand out"</p>
+                    <p><button class="button"><a href="order.html" target="main" style="text-decoration: none">Buy Now</button></p></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="column, column colour changing designs tote bag">
+                <div class="card">
+                  <img src="images/catty-design-totebag.png" alt="Catty Design Tote Bag" style="width:100%">
+                  <div class="container">
+                    <h2>Catty</h2>
+                    <p class="price">RM25</p>
+                    <p class="quotes">"Catty pur make me happy"</p>
+                    <p><button class="button"><a href="order.html" target="main" style="text-decoration: none">Buy Now</button></p></a>
+                  </div>
+                </div>
+              </div>
+
+              <!--Personalised your name button-->
+              <div class="column, column personalised your name">
+                <div class="card">
+                  <img src="images/abril-fatface-font-name.png" alt="Abril Fatface Font Name" style="width:100%">
+                  <div class="container">
+                    <h2>01 Abril Fatface</h2>
+                    <p class="price">RM5</p>
+                    <p><button class="button"><a href="order.html" target="main" style="text-decoration: none">Buy Now</button></p></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="column, column personalised your name">
+                <div class="card">
+                  <img src="images/alice-font-name.png" alt="Alice Fatface Font Name" style="width:100%">
+                  <div class="container">
+                    <h2>02 Alice</h2>
+                    <p class="price">RM5</p>
+                    <p><button class="button"><a href="order.html" target="main" style="text-decoration: none">Buy Now</button></p></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="column, column personalised your name">
+                <div class="card">
+                  <img src="images/alex-brush-font-name.png" alt="Alex Brush Font Name" style="width:100%">
+                  <div class="container">
+                    <h2>03 Alex Brush</h2>
+                    <p class="price">RM5</p>
+                    <p><button class="button"><a href="order.html" target="main" style="text-decoration: none">Buy Now</button></p></a>
+                  </div>
+                </div>
+              </div>
+          
+              <div class="column, column personalised your name">
+                <div class="card">
+                  <img src="images/aloja-font-name.png" alt="Aloja Font Name" style="width:100%">
+                  <div class="container">
+                    <h2>04 Aloja</h2>
+                    <p class="price">RM5</p>
+                    <p><button class="button"><a href="order.html" target="main" style="text-decoration: none">Buy Now</button></p></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="column, column personalised your name">
+                <div class="card">
+                  <img src="images/bebas-neue-font-name.png" alt="Bebas Neue Font Name" style="width:100%">
+                  <div class="container">
+                    <h2>05 Bebas Neue</h2>
+                    <p class="price">RM5</p>
+                    <p><button class="button"><a href="order.html" target="main" style="text-decoration: none">Buy Now</button></p></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="column, column personalised your name">
+                <div class="card">
+                  <img src="images/canva-font-name.png" alt="Canva Font Name" style="width:100%">
+                  <div class="container">
+                    <h2>06 Canva</h2>
+                    <p class="price">RM5</p>
+                    <p><button class="button"><a href="order.html" target="main" style="text-decoration: none">Buy Now</button></p></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="column, column personalised your name">
+                <div class="card">
+                  <img src="images/dreaming-font-name.png" alt="Dreaming Font Name" style="width:100%">
+                  <div class="container">
+                    <h2>07 Dreaming</h2>
+                    <p class="price">RM5</p>
+                    <p><button class="button"><a href="order.html" target="main" style="text-decoration: none">Buy Now</button></p></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="column, column personalised your name">
+                <div class="card">
+                  <img src="images/gochi-hand-font-name.png" alt="Gochi Hand Font Name" style="width:100%">
+                  <div class="container">
+                    <h2>08 Gochi Hand</h2>
+                    <p class="price">RM5</p>
+                    <p><button class="button"><a href="order.html" target="main" style="text-decoration: none">Buy Now</button></p></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="column, column personalised your name">
+                <div class="card">
+                  <img src="images/moontime-font-name.png" alt="Moontime Font Name" style="width:100%">
+                  <div class="container">
+                    <h2>09 Moontime</h2>
+                    <p class="price">RM5</p>
+                    <p><button class="button"><a href="order.html" target="main" style="text-decoration: none">Buy Now</button></p></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="column, column personalised your name">
+                <div class="card">
+                  <img src="images/playlist-script-font-name.png" alt="Playlist Script Font Name" style="width:100%">
+                  <div class="container">
+                    <h2>010 Playlist Script</h2>
+                    <p class="price">RM5</p>
+                    <p><button class="button"><a href="order.html" target="main" style="text-decoration: none">Buy Now</button></p></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="column, column personalised your name">
+                <div class="card">
+                  <img src="images/bristol-font-name.png" alt="Bristol Font Name" style="width:100%">
+                  <div class="container">
+                    <h2>011 Bristol</h2>
+                    <p class="price">RM5</p>
+                    <p><button class="button"><a href="order.html" target="main" style="text-decoration: none">Buy Now</button></p></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="column, column personalised your name">
+                <div class="card">
+                  <img src="images/caveat-font-name.png" alt="Caveat Font Name" style="width:100%">
+                  <div class="container">
+                    <h2>012 Caveat</h2>
+                    <p class="price">RM5</p>
+                    <p><button class="button"><a href="order.html" target="main" style="text-decoration: none">Buy Now</button></p></a>
+                  </div>
+                </div>
+              </div>
+
+              <!--Custom own designs button-->
+              <div class="column, column custom own designs">
+                <div class="card">
+                  <img src="images/custom-designs.png" alt="Custom Designs" style="width:100%">
+                  <div class="container">
+                    <h2>Custom own designs</h2>
+                    <p class="price">RM5</p>
+                    <p>Send us the image.</p>
+                    <p><button class="button"><a href="order.html" target="main" style="text-decoration: none">Buy Now</button></p></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="column, column custom own designs">
+                <div class="card">
+                  <img src="images/custom-font-types.png" alt="Custom Font Types" style="width:100%">
+                  <div class="container">
+                    <h2>Custom font types</h2>
+                    <p class="price">RM5</p>
+                    <p>Send us the name of fonts.</p>
+                    <p><button class="button"><a href="order.html" target="main" style="text-decoration: none">Buy Now</button></p></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="column, column custom own designs">
+                <div class="card">
+                  <img src="images/custom-font-colours.png" alt="Custom Font Colours" style="width:100%">
+                  <div class="container">
+                    <h2>Custom font colours</h2>
+                    <p class="price">RM5</p>
+                    <p>Send us what font colours that you want.</p>
+                    <p><button class="button"><a href="order.html" target="main" style="text-decoration: none">Buy Now</button></p></a>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+        
+          <!--Colour changing designs tote bag button-->
+          <script>
+              filterSelection("all")
+              function filterSelection(c) {
+                var x, i;
+                x = document.getElementsByClassName("column");
+                if (c == "all") c = "";
+                for (i = 0; i < x.length; i++) {
+                  w3RemoveClass(x[i], "show");
+                  if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+                }
+              }
+              function w3AddClass(element, name) {
+                var i, arr1, arr2;
+                arr1 = element.className.split(" ");
+                arr2 = name.split(" ");
+                for (i = 0; i < arr2.length; i++) {
+                  if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+                }
+              }
+              function w3RemoveClass(element, name) {
+                var i, arr1, arr2;
+                arr1 = element.className.split(" ");
+                arr2 = name.split(" ");
+                for (i = 0; i < arr2.length; i++) {
+                  while (arr1.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);     
+                  }
+                }
+                element.className = arr1.join(" ");
+              }
+              // Add active class to the current button (highlight it)
+              var btnContainer = document.getElementById("myBtnContainer");
+              var btns = btnContainer.getElementsByClassName("btn");
+              for (var i = 0; i < btns.length; i++) {
+                btns[i].addEventListener("click", function(){
+                  var current = document.getElementsByClassName("active");
+                  current[0].className = current[0].className.replace(" active", "");
+                  this.className += " active";
+                });
+              }
+          </script>
+  </body>
+</html>

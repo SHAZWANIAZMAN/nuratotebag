@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Quicksand'>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Home</title>
+    <style>
+      /* Style the wallpaper welcomepage */
+      body  
+        {
+            height: 100%;
+            width: auto;
+            background-size: cover;
+            background-repeat: no-repeat;
+            overflow: hidden;
+          }
+      a:link
+          {
+            color: black;
+            font-weight: bold;
+            background-color: #f9f7e8;
+            border-radius: 50px;
+          }
+      a:hover
+          {
+            background-color: #f5ddff;
+          }
+      a:active
+          {
+            color: red;
+            background-color: #ffffd9;
+          }
+      .container{
+            margin-top: 20px;  
+          }
+      /* Slideshow container */
+      .slideshow-container 
+          {
+            position: relative;
+            margin: auto;
+            width: 100%;
+          }
+      /* Number text (1/3 etc) */
+      .numbertext 
+          {
+            color: black;
+            font-weight: bold;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+          }
+      </style>
+    </head>
+  <body >
+      <h1 style="font-size: 50px; margin-top: 10px">Nura Tote Bag</h1>
+        <p style="text-align: center; font-size: 20px; margin-top: -20px; font-weight: bold;">We offer high quality of printing tote bag and colour changing designs tote bag which make us different from others.</i></p>          
+      
+      <!-- Slideshow container -->
+      <div class="slideshow-container" style="margin-top: 5px;">
+        <div class="mySlides">
+          <div class="numbertext">1 / 3</div>
+            <img src="images/sending-love-campaign-banner.png" style="width:100%">
+          </div>
+        <div class="mySlides">
+          <div class="numbertext">2 / 3</div>
+            <img src="images/minimialist-edition-banner.png" style="width:100%">
+          </div>
+        <div class="mySlides">
+          <div class="numbertext">3 / 3</div>
+            <img src="images/colour-changing-designs-totebag-banner.png" style="width:100%">
+          </div>
+      </div>
+      <br>
+
+          <!-- Script for automatic slideshow -->
+          <script>
+              var slideIndex = 0;
+              showSlides();
+
+              function showSlides() {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) {slideIndex = 1}
+                slides[slideIndex-1].style.display = "block";
+                setTimeout(showSlides, 6000); // Change image every 6 seconds
+              }
+
+          </script>
+  </body>
+</html>
